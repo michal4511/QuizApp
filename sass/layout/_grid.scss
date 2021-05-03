@@ -1,0 +1,26 @@
+.page-content {
+  display: grid;
+  grid-gap: 2rem;
+  padding: 0rem;
+  max-width: 100%;
+  margin: 2rem;
+  margin-top: 6rem;
+  grid-template-columns: repeat(4, 1fr);
+    
+  @include respond(big-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(phone) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+}

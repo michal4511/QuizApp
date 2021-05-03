@@ -1,0 +1,128 @@
+.popup {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/study.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    text-align: center;
+
+    &__quiz {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+        width: 60%;
+        height: 60rem;
+        background: rgba(0, 0, 0,.9);
+        box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.5);
+        border-radius: 3px;
+        overflow: hidden;
+        border-radius: 4px;
+        color: var(--primary-color-two);
+    
+        @include respond(tab-port) {
+           width: 70%;
+        }
+          
+        @include respond(phone) {
+            width: 85%;
+            margin-top: 2rem;
+        }
+    }
+
+    &__clockdiv{
+        font-size: 3rem;
+        font-weight: 400;
+        width: 80%;
+        height: 10%;
+        margin: 2rem 0;
+        letter-spacing: 2px;
+
+        &>div {
+            display: inline-block;
+        }
+    }
+
+    &__question {
+        font-size: 2.5rem;
+        font-weight: 300;
+        width: 80%;
+        height: 25%;
+        min-height: 25%;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 .7rem var(--primary-color-one);
+    }
+
+    &__answers {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-content: center;
+        grid-gap: 2.5rem;
+        width: 80%;
+        height: 45%;
+
+        @include respond(phone) {
+            grid-template-columns: repeat(1, 1fr);
+            width: 50%;
+            margin-top: 2rem;
+        }
+    }
+
+    &__buttons {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 20%;
+    }
+
+    &__notification {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+
+        &--window {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 40rem;
+            height: 25rem;
+            color: var(--primary-color-two);
+            font-size: var(--primary-size);
+        
+            border: solid var(--primary-color-two) 1px;
+           
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            & h2 {
+                margin: 2rem;
+            }
+
+            & .button {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}

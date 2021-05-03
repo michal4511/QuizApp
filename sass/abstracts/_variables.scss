@@ -1,0 +1,32 @@
+:root {
+    --primary-color-one: #FABC09;
+    --primary-color-two: #FACC43;
+    --primary-color-three: #25BEA0;
+
+    --background-color-lighten: #3e5163;
+
+    --default-font-size: 1.6rem;
+
+    --d: 0.7s;
+    --e: cubic-bezier(0.19, 1, 0.22, 1);
+
+    --correct-answer: #00A391;
+    --wrong-answer: #E43F1E;
+    --button-color: #FFAA55;
+
+}
+
+$grid-width: 114rem;
+
+%background-properties {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-size: cover;
+    background-position: center 0;
+    transition: transform calc(var(--d) * 1.5) var(--e);
+    pointer-events: none;
+}

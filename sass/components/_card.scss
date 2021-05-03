@@ -1,0 +1,158 @@
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  height: 32rem;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0.5rem 0.5rem 1rem black;
+
+  @media (hover: hover) and (min-width: 56.25em) {
+    &:hover {
+      &:before { transform: translateY(-5%); }
+    }
+  
+    &:hover .card__content {
+      transform: translateY(0);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
+  
+      > *:not(.heading-tertiary) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: calc(var(--d) / 8 );
+      }
+    }
+  }
+
+  @include respond(tab-port) {
+    height: 40rem;
+  }
+
+  @include respond(phone) {
+    height: 50rem;
+  }
+
+  
+  &__icon {
+    fill: var(--primary-color-three);
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 3.25rem;
+    width: 3.25rem;
+    transition: all 1s;
+
+    @include respond(tab-port) {
+      top: 2%;
+      left: 93%;
+    }
+  }
+
+  &:hover &__icon {
+    opacity: 0;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    transition: transform var(--d) var(--e);
+    z-index: 1;
+    border-radius: 4px;
+    
+    > * + * {
+      margin-top: 1rem;
+    }
+
+    & .button {
+      margin-bottom: 2rem;
+    }
+
+    @include respond(tab-port) {
+      align-self: center;
+      margin: 0 5%;
+      height: 80%;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+    }
+    
+    @include respond(phone) {
+      justify-content: space-between;
+      width: 70%;
+      padding: 3rem 2rem;
+    }
+
+    @media (hover: hover) and (min-width: 56.25em) {
+      transform: translateY(calc(100% - 6.5rem));
+      
+      > *:not(.heading-tertiary) {
+        opacity: 1;
+        transform: translateY(1rem);
+        transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+      }
+    }
+  }
+
+  &--1 {
+    &:before {
+      @extend %background-properties;
+      background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(../img/history.jpg);
+    }
+  }
+  
+  &--2 {
+    &:before {
+      @extend %background-properties;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(../img/geography.jpg);
+    }
+  }
+  
+  &--3 {
+    &:before {
+      @extend %background-properties;
+      background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(../img/physics.jpg);
+    }
+  }
+  
+  &--4 {
+    &:before {
+      @extend %background-properties;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(../img/math.jpg);
+    }
+  }
+  
+  &--5 {
+    &:before {
+      @extend %background-properties;
+      background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(../img/languages.jpg);
+    }
+  }
+  
+  &--6 {
+    &:before {
+      @extend %background-properties;
+      background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(../img/chemistry.jpg);
+    }
+  }
+
+  &__confirm {
+    color: var(--primary-color-three);
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &--paragraph {
+      font-size: 2rem;
+      font-style: normal;
+    }
+  }
+}

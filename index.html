@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <title>Bible Quiz</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/script.js"></script>
+    
+
+</head>
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#cards" class="navigation__link">Topics</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Join Us</a></li>
+                <li class="navigation__item"><a href="#contact" class="navigation__link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary__main">Study</span>
+                <span class="heading-primary__main">Quiz</span>
+                <span class="heading-primary__sub">More than 100 question in the 6 unique topic</span>
+            </h1> 
+        </div>
+    </header>
+
+    <main>
+        <section class="section-topic">
+            <div class="section-topic__box">
+ 
+                <h2 class="heading-secondary">
+                    The topics for your Quiz
+                </h2>
+                
+                <div class="page-content" id="cards">
+                    
+                        <div class="card card--1">
+                            <div class="card__content">
+                                <h2 class="heading-tertiary">History</h2>
+                                <p class="paragraph">It's your time to shine, with our History Trivia questions.</p>
+                                <div class="button" id="firstBtn">
+                                    <a href="#" class="button__btn button__effect01"><span>Start</span></a> 
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card card--2">
+                            <div class="card__content">
+                                <h2 class="heading-tertiary">Geography</h2>
+                                <p class="paragraph">Geography quiz questions to test your general knowledge</p>
+                                <div class="button" id="secondBtn">
+                                    <a href="#" class="button__btn button__effect01" id="characters-button"><span>Start</span></a> 
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card card--3">
+                            <div class="card__content">
+                                <h2 class="heading-tertiary">Physics</h2>
+                                <p class="paragraph">Find surprising answers to physics questions.</p>
+                                <div class="button" id="thirdBtn">
+                                    <a href="#" class="button__btn button__effect01" id="characters-button"><span>Start</span></a> 
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card card--4">
+                            <div class="card__content">
+                                <h2 class="heading-tertiary">Math</h2>
+                                <p class="paragraph">A set of multiple choice maths questions are presented.</p>
+                                <div class="button" id="fourthBtn">
+                                    <a href="#" class="button__btn button__effect01" id="characters-button"><span>Start</span></a> 
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card card--5">
+                            <svg class="card__icon" >
+                                <use href="img/sprite.svg#icon-lock" id="lock-card-5"></use>
+                                <use href="img/sprite.svg#icon-lock-open" class="hide" id="lock-open-card-5"></use>
+                            </svg>
+                            <div class="card__content">
+                                <h2 class="heading-tertiary">Languages</h2>
+                                <p class="paragraph">Test your knowledge with language quiz questions. </p>
+
+                                <div class="card__confirm" id="confirm-card-5">
+                                    <p class="card__confirm--paragraph">You need 3 points</p>
+                                    <div class="btn">
+                                        <button class="btn__confirm" id="btn-confirm-card-5">Ok</button>
+                                    </div>     
+                                </div>
+
+                                <div class="button hide" id="fifthBtn">
+                                    <a href="#" class="button__btn button__effect01"><span>Start</span></a> 
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card card--6">
+                            <svg class="card__icon" >
+                                <use href="img/sprite.svg#icon-lock" id="lock-card-6"></use>
+                                <use href="img/sprite.svg#icon-lock-open" class="hide" id="lock-open-card-6"></use>
+                            </svg>
+                            <div class="card__content">
+                                <h2 class="heading-tertiary">Chemistry</h2>
+                                <p class="paragraph">How many of these Chemistry Trivia quiz questions can you answer?</p>
+
+                                <div class="card__confirm" id="confirm-card-6">
+                                    <p class="card__confirm--paragraph">Yoou need 6 points</p>
+                                    <div class="btn"><button class="btn__confirm" id="btn-confirm-card-6">Ok</button></div>     
+                                </div>
+
+                                <div class="button hide" id="sixthBtn">
+                                    <a href="#" class="button__btn button__effect01"><span>Start</span></a> 
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="section-book" id="contact">
+            <div class="book">
+                <form action="#" class="form">
+                    <h2 class="heading-secondary">
+                        Contact Us
+                    </h2>
+                    <input type="text" class="form__input" placeholder="Full name" id="name" required>
+                    <input type="email" class="form__input" placeholder="Email address" id="email" required>
+                    <textarea class="form__input form__input-textarea" placeholder="Your message"></textarea>
+                    <div class="button">
+                        <a href="#" class="button__btn button__effect01" id="characters-button"><span>Send</span></a> 
+                    </div>
+                </form>
+            </div>
+                      
+        </section>
+    </main>
+
+    <section class="popup hide" id="popup">
+
+        <div class="popup__quiz" id="quiz">
+           
+            <div class="popup__clockdiv" id="clockdiv">
+                <div>
+                    <span class="minutes"></span>
+                </div>
+                <span>&#58;</span>
+                <div>
+                    <span class="seconds"></span>
+                </div>
+            </div>
+
+            <div class="popup__question" id="question">Ktory den ako den sviatocneho odpocinku svatil jezis?</div>
+
+            <div class="popup__answers" id="answer-buttons">
+                <button>3</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+
+            </div>
+
+            <div class="popup__buttons">
+
+                <div class="button" id="btn-exit">
+                    <a href="#" class="button__btn button__effect01"><span>Exit</span></a> 
+                </div>
+
+                <div class="button covered" id="btn-check">
+                    <a href="#" class="button__btn button__effect01 button-check"><span>Check</span></a> 
+                </div>
+
+                <div class="button covered" id="btn-next">
+                    <a href="#" class="button__btn button__effect01 button-next"><span>Next</span></a> 
+                </div>
+
+            </div>
+        </div>
+
+        <div class="popup__notification hide" id="notification">
+            <div class="popup__notification--window">
+                <h2 class="heading-tertiary">Sorry, your time is done.</h2>
+                <div class="button" id="btn-complete">
+                    <a href="#" class="button__btn button__effect01"><span>Complete</span></a> 
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="overview-score">
+        <div class="overview-score__points" id="score">0</div>
+        <div class="overview-score__text">points</div>
+    </div>
+    
+</body>
+</html>

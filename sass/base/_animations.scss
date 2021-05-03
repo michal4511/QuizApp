@@ -1,0 +1,36 @@
+@keyframes span1{
+    0%{
+        left:-100%
+    }
+    100%{
+        left:100%;
+    }
+}
+
+@keyframes span2{
+    0%{
+        top:-100%;
+    }
+    100%{
+        top:100%;
+    }
+}
+
+
+@keyframes span3{
+    0%{
+        right:-100%;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+@keyframes span4{
+    0%{
+        bottom: -100%;
+    }
+    100%{
+        bottom:100%;
+    }
+}
